@@ -1,0 +1,540 @@
+/* --- Estilos Gerais e Layout --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+/* ================================================= */
+/*          1. BARRA DE NAVEGAÇÃO SUPERIOR           */
+/* ================================================= */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* --- Logo e Menu --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hamburger-menu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo .youtube-logo-img {
+  width: 90px;
+  height: auto;
+  display: block;
+}
+
+/* --- Barra de Pesquisa --- */
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 40px 0 0 40px;
+  border-right: none;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #1c62b9;
+}
+
+.search-button {
+  padding: 0 24px;
+  border: 1px solid #ccc;
+  border-radius: 0 40px 40px 0;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.search-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* --- Ícones de Usuário --- */
+.user-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-profile-picture {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.notification-bell {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* ================================================= */
+/*                2. CONTEÚDO PRINCIPAL              */
+/* ================================================= */
+
+.content {
+  display: flex;
+  padding: 20px;
+  gap: 24px;
+}
+
+/* --- Área de Vídeo Principal --- */
+.video-area {
+  flex-grow: 1;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 480px;
+  background-color: #000;
+  border-radius: 12px;
+
+  /* --- PROPRIEDADES ATUALIZADAS PARA O BANNER --- */
+  background-image: url('img/kaspersky-banner.png'); /* <<< Muda a imagem para o seu novo banner */
+  background-repeat: no-repeat;
+  background-position: center; /* <<< Centra a imagem do banner */
+  background-size: cover;      /* <<< MUITO IMPORTANTE: Faz a imagem cobrir toda a área */
+}
+
+.video-main-title {
+  font-size: 20px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+/* Barra de Ações (Like, Subscribe, etc.) */
+.actions-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+.channel-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.channel-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.channel-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.channel-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.channel-subscribers {
+  font-size: 12px;
+  color: #606060;
+}
+
+a.subscribe-button {
+  text-decoration: none;
+}
+
+.subscribe-button {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.subscribe-button:hover {
+  background-color: #b30000;
+}
+
+.action-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+a.action-button {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 18px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #e5e5e5;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.button-group .action-button {
+  border-radius: 0;
+  padding: 8px 12px;
+}
+
+.button-group .like-button {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  border-right: 1px solid #ccc;
+}
+
+.button-group .dislike-button {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.action-button .icon {
+  font-size: 16px;
+}
+
+/* Estilo para botão ativo de Like/Dislike */
+.action-button.active {
+  background-color: #d9d9d9;
+  color: #0f0f0f;
+}
+
+.description-box {
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.description-box p {
+  margin: 0 0 8px 0;
+}
+
+.description-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Sidebar (Barra Lateral) --- */
+.sidebar {
+  width: 402px;
+  min-width: 402px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-video {
+  display: flex;
+  gap: 8px;
+}
+
+.sidebar-thumbnail {
+  width: 168px;
+  height: 94px;
+  border-radius: 8px;
+  background-color: #eee;
+}
+
+.sidebar-video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+a.sidebar-video-title {
+  text-decoration: none;
+}
+
+.sidebar-video-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0f0f0f;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.sidebar-video-meta {
+  font-size: 12px;
+  color: #606060;
+  margin: 0;
+  line-height: 1.3;
+}
+
+a.sidebar-video-title:hover {
+  color: #000;
+}
+
+
+/* ================================================= */
+/*           3. JANELA MODAL DE COMPARTILHAMENTO     */
+/* ================================================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #282828;
+  color: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 520px;
+  font-family: Arial, sans-serif;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.create-post-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #555;
+  background: #f1f1f1;
+  color: #0f0f0f;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.divider {
+  border-bottom: 1px solid #555;
+  margin-bottom: 16px;
+}
+
+.share-title {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.share-icons-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.share-icon-item {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.share-icon-item p {
+  font-size: 12px;
+  margin: 8px 0 0 0;
+  color: #aaa;
+}
+
+.share-icon {
+  display: grid;
+  place-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  background: #555;
+}
+
+.share-icon.whatsapp-icon { background: #25D366; }
+.share-icon.facebook-icon { background: #1877F2; font-weight: bold; }
+.share-icon.x-icon { background: #000; font-weight: bold; }
+
+.link-container {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.link-input {
+  flex-grow: 1;
+  background: #121212;
+  border: 1px solid #555;
+  color: white;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+  font-size: 14px;
+}
+
+.copy-button {
+  padding: 0 16px;
+  background-color: #3ea6ff;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.start-at-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* ================================================= */
+/*           4. ESTILOS PARA DISPOSITIVOS MÓVEIS     */
+/* ================================================= */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .top-bar {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .search-container {
+    order: 3;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  .video-placeholder {
+    height: 240px; 
+  }
+
+  .actions-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}```
+/* --- Estilos para a Caixa de Sugestões de Pesquisa --- */
+
+/* Torna o container da pesquisa um ponto de referência para o posicionamento */
+.search-container {
+  position: relative; 
+}
+
+.suggestions-box {
+  position: absolute; /* Posiciona a caixa em relação ao seu pai (.search-container) */
+  top: 100%; /* Coloca a caixa logo abaixo da barra de pesquisa */
+  left: 0;
+  width: calc(100% - 70px); /* Largura igual à da barra de texto (ajustar se necessário) */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none; /* Remove a borda de cima para se unir à barra */
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100; /* Garante que fique por cima de outros elementos */
+}
+
+/* Esconde a caixa por padrão */
+.suggestions-box.hidden {
+  display: none;
+}
+
+.suggestions-box ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestions-box li {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.suggestions-box li:hover {
+  background-color: #f0f0f0;
+}

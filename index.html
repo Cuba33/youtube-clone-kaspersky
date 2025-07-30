@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="logo-container">
+      <button class="hamburger-menu">☰</button>
+      <a href="https://www.youtube.com" class="logo">
+        <img src="img/Left.png" alt="Logo de YouTube" class="youtube-logo-img">
+      </a>
+    </div>
+
+    <!-- Container da Barra de Pesquisa -->
+<div class="search-container">
+  <input type="text" id="search-input" class="search-input" placeholder="Pesquisar">
+  <button id="search-button" class="search-button">
+    🔍
+  </button>
+  <!-- ▼▼▼ NOVO CONTAINER PARA AS SUGESTÕES ▼▼▼ -->
+  <div id="search-suggestions" class="suggestions-box hidden"></div>
+</div>
+
+    <div class="user-icons">
+      <a href="https://www.youtube.com/user/Kaspersky" target="_blank">
+  <img src="img/imgkaspersky-logo.png" alt="Perfil de usuário" class="user-profile-picture">
+</a>
+      <span class="notification-bell">🔔</span>
+    </div>
+  </header>
+  
+  <main class="content">
+    
+    <section class="video-area">
+      <div class="video-placeholder"></div>
+      
+      <h2 class="video-main-title">Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo Invertido con HTML e CSS</h2>
+
+      <div class="actions-bar">
+        <div class="channel-container">
+          <div class="channel-info">
+            <a href="https://www.youtube.com/user/Kaspersky" target="_blank">
+  <img src="img/imgkaspersky-logo.png" alt="Kaspersky" class="channel-logo">
+</a>
+            <div class="channel-meta">
+              <span class="channel-name">Kaspersky</span>
+              <span class="channel-subscribers">100,3 mil inscritos</span>
+            </div>
+          </div>
+          <a href="https://www.youtube.com/user/Kaspersky?sub_confirmation=1" target="_blank" class="subscribe-button">Inscreva-se</a>
+        </div>
+
+        <div class="action-buttons-container">
+          <div class="button-group">
+            <button id="like-button" class="action-button like-button">
+              <span class="icon">👍</span>
+              <span id="like-count">5 mil</span>
+            </button>
+            <button id="dislike-button" class="action-button dislike-button">
+              <span class="icon">👎</span>
+            </button>
+          </div>
+          <button class="action-button share-button"><span class="icon">🔗</span><span>Compartilhar</span></button>
+          <a href="https://www.kaspersky.com.br/downloads#update-product" target="_blank" class="action-button download-button"><span class="icon">⬇️</span><span>Download</span></a>
+        </div>
+      </div>
+
+      <div class="description-box">
+        <p><strong>80.418 visualizações - Transmitido ao vivo em 23 ago. de 2022</strong></p>
+        <p>
+          Neste vídeo, exploramos as melhores práticas de cibersegurança e como as soluções da Kaspersky podem proteger seus dispositivos contra as ameaças digitais mais recentes.
+        </p>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+  <!-- VÍDEO 1: Ciência de Dados -->
+  <div class="sidebar-video">
+    <a href="#" class="sidebar-thumbnail-link">
+      <!-- Rota para a imagem local correta -->
+      <img src="img/image 11.png" alt="Miniatura Geração Tech Unimed" class="sidebar-thumbnail">
+    </a>
+    <div class="sidebar-video-info">
+      <a href="#" class="sidebar-video-title">Geração Tech Unimed - BH - Ciência de Dados</a>
+      <p class="sidebar-video-meta">DigitalInnovationOne</p>
+      <p class="sidebar-video-meta">2,1 mil visualizações • Transmitido há 2 dias</p>
+    </div>
+  </div>
+  
+  <!-- VÍDEO 2: Scrum Talks -->
+  <div class="sidebar-video">
+    <a href="#" class="sidebar-thumbnail-link">
+      <!-- Rota para a imagem local correta -->
+      <img src="img/image 12.png" alt="Miniatura Scrum Talks" class="sidebar-thumbnail">
+    </a>
+    <div class="sidebar-video-info">
+      <a href="#" class="sidebar-video-title">Scrum Talks</a>
+      <p class="sidebar-video-meta">DigitalInnovationOne</p>
+      <p class="sidebar-video-meta">1,6 mil visualizações • Transmitido há 3 dias</p>
+    </div>
+  </div>
+
+  <!-- VÍDEO 3: Machine Learning -->
+  <div class="sidebar-video">
+    <a href="#" class="sidebar-thumbnail-link">
+      <!-- Rota para a imagem local correta -->
+      <img src="img/image 13.png" alt="Miniatura Machine Learning Avançado" class="sidebar-thumbnail">
+    </a>
+    <div class="sidebar-video-info">
+      <a href="#" class="sidebar-video-title">Machine Learning Avançado - Fast Track</a>
+      <p class="sidebar-video-meta">DigitalInnovationOne</p>
+      <p class="sidebar-video-meta">1,7 mil visualizações • Transmitido há 4 dias</p>
+    </div>
+  </div>
+
+  <!-- VÍDEO 4: Project Planning -->
+  <div class="sidebar-video">
+    <a href="#" class="sidebar-thumbnail-link">
+      <!-- Rota para a imagem local correta -->
+      <img src="img/image 14.png" alt="Miniatura Global Skills Project Planning" class="sidebar-thumbnail">
+    </a>
+    <div class="sidebar-video-info">
+      <a href="#" class="sidebar-video-title">Global Skills #2 - Project Planning</a>
+      <p class="sidebar-video-meta">DigitalInnovationOne</p>
+      <p class="sidebar-video-meta">971 visualizações • Transmitido há 5 dias</p>
+    </div>
+  </div>
+
+  <!-- VÍDEO 5: Python do ZERO -->
+  <div class="sidebar-video">
+    <a href="#" class="sidebar-thumbnail-link">
+      <!-- Rota para a imagem local correta -->
+      <img src="img/image 15.png" alt="Miniatura Como aprender Python do ZERO" class="sidebar-thumbnail">
+    </a>
+    <div class="sidebar-video-info">
+      <a href="#" class="sidebar-video-title">Como aprender a programar Python do ZERO</a>
+      <p class="sidebar-video-meta">DigitalInnovationOne</p>
+      <p class="sidebar-video-meta">711 visualizações • Transmitido há 6 dias</p>
+    </div>
+  </div>
+</aside>
+    
+  </main>
+
+  <!-- ============= JANELA MODAL DE COMPARTILHAMENTO (CORRIGIDO) ============= -->
+<div id="share-modal-overlay" class="modal-overlay hidden">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <h2>Compartilhar em uma postagem</h2>
+      <button id="close-modal-button" class="close-button">✕</button>
+    </div>
+
+    <button class="create-post-button">Criar postagem</button>
+    <div class="divider"></div>
+    
+    <h3 class="share-title">Compartilhar</h3>
+    <div class="share-icons-container">
+      <div class="share-icon-item">
+        <a href="#" class="share-icon embed-icon"><span></></span></a>
+        <p>Incorporar</p>
+      </div>
+      <div class="share-icon-item">
+        <a href="whatsapp://send?text=Confira%20este%20vídeo!%20https://youtu.be/KNO9Nkxcg9w" target="_blank" class="share-icon whatsapp-icon"><span>💬</span></a>
+        <p>WhatsApp</p>
+      </div>
+      <div class="share-icon-item">
+        <a href="mailto:?subject=Confira%20este%20vídeo&body=Eu%20achei%20que%20você%20gostaria%20deste%20vídeo:%20https://youtu.be/KNO9Nkxcg9w" class="share-icon email-icon"><span>✉️</span></a>
+        <p>E-mail</p>
+      </div>
+      <div class="share-icon-item">
+        <a href="https://twitter.com/intent/tweet?url=https://youtu.be/KNO9Nkxcg9w&text=Confira%20este%20vídeo!" target="_blank" class="share-icon x-icon"><span>X</span></a>
+        <p>X</p>
+      </div>
+      <div class="share-icon-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://youtu.be/KNO9Nkxcg9w" target="_blank" class="share-icon facebook-icon"><span>f</span></a>
+        <p>Facebook</p>
+      </div>
+    </div>
+
+    <div class="link-container">
+      <input id="video-link-input" type="text" value="https://youtu.be/KNO9Nkxcg9w" readonly class="link-input">
+      <button id="copy-link-button" class="copy-button">Copiar</button>
+    </div>
+    
+    <div class="start-at-container">
+      <input type="checkbox" id="start-at-checkbox">
+      <label for="start-at-checkbox">Começar em 0:00</label>
+    </div>
+
+  </div>
+</div>
+
+  <!-- ============= SCRIPT ÚNICO E CORRIGIDO ============= -->
+  <script>
+    // --- LÓGICA DO MODAL DE COMPARTILHAMENTO ---
+    const shareButton = document.querySelector('.share-button');
+    const modalOverlay = document.getElementById('share-modal-overlay');
+    const closeModalButton = document.getElementById('close-modal-button');
+    const copyLinkButton = document.getElementById('copy-link-button');
+    const videoLinkInput = document.getElementById('video-link-input');
+
+    if (shareButton) {
+        shareButton.addEventListener('click', () => modalOverlay.classList.remove('hidden'));
+    }
+    if (closeModalButton) {
+        closeModalButton.addEventListener('click', () => modalOverlay.classList.add('hidden'));
+    }
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (event) => {
+            if (event.target === modalOverlay) {
+                modalOverlay.classList.add('hidden');
+            }
+        });
+    }
+    if (copyLinkButton) {
+        copyLinkButton.addEventListener('click', () => {
+            videoLinkInput.select();
+            videoLinkInput.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(videoLinkInput.value).then(() => {
+                copyLinkButton.textContent = 'Copiado!';
+                setTimeout(() => { copyLinkButton.textContent = 'Copiar'; }, 2000);
+            });
+        });
+    }
+
+    // --- LÓGICA DE LIKE E DISLIKE ---
+    const likeButton = document.getElementById('like-button');
+    const dislikeButton = document.getElementById('dislike-button');
+    const likeCountSpan = document.getElementById('like-count');
+
+    if (likeButton && dislikeButton && likeCountSpan) {
+        let likeCount = 5000;
+        let isLiked = false;
+        let isDisliked = false;
+
+        function updateLikeDisplay() {
+            if (likeCount >= 1000) {
+                likeCountSpan.textContent = (likeCount / 1000).toFixed(1).replace('.', ',') + ' mil';
+            } else {
+                likeCountSpan.textContent = likeCount.toLocaleString('pt-BR');
+            }
+        }
+        
+        updateLikeDisplay(); // Define o valor inicial
+
+        likeButton.addEventListener('click', () => {
+            if (isLiked) {
+                likeCount--;
+                isLiked = false;
+                likeButton.classList.remove('active');
+            } else {
+                likeCount++;
+                isLiked = true;
+                likeButton.classList.add('active');
+                if (isDisliked) {
+                    isDisliked = false;
+                    dislikeButton.classList.remove('active');
+                }
+            }
+            updateLikeDisplay();
+        });
+
+        dislikeButton.addEventListener('click', () => {
+            if (isDisliked) {
+                isDisliked = false;
+                dislikeButton.classList.remove('active');
+            } else {
+                isDisliked = true;
+                dislikeButton.classList.add('active');
+                if (isLiked) {
+                    likeCount--;
+                    isLiked = false;
+                    likeButton.classList.remove('active');
+                }
+            }
+            updateLikeDisplay();
+        });
+    }
+  </script>
+<script> EXISTENTE ---
+
+// ===============================================
+//   ▼▼▼ ADICIONE ESTE NOVO BLOCO DE CÓDIGO ▼▼▼
+// ===============================================
+
+// --- LÓGICA DAS SUGESTÕES DE PESQUISA ---
+
+const searchInput = document.getElementById('search-input');
+const suggestionsBox = document.getElementById('search-suggestions');
+
+// 1. Lista de sugestões
+const suggestions = [
+  "Kaspersky",
+  "Norton Antivirus",
+  "McAfee Total Protection",
+  "Bitdefender",
+  "Avast Free Antivirus",
+  "AVG Antivirus"
+];
+
+// 2. Função para mostrar as sugestões
+function showSuggestions() {
+  // Limpa sugestões anteriores
+  suggestionsBox.innerHTML = '';
+  
+  // Cria a lista <ul>
+  const ul = document.createElement('ul');
+
+  suggestions.forEach(suggestionText => {
+    const li = document.createElement('li');
+    li.textContent = suggestionText;
+    
+    // Adiciona o evento de clique a cada sugestão
+    li.addEventListener('click', () => {
+      searchInput.value = suggestionText; // Coloca o texto na barra
+      suggestionsBox.classList.add('hidden'); // Esconde a caixa
+      // Opcional: Iniciar a pesquisa ao clicar
+      performSearch(suggestionText); 
+    });
+    
+    ul.appendChild(li);
+  });
+
+  suggestionsBox.appendChild(ul);
+  suggestionsBox.classList.remove('hidden'); // Mostra a caixa
+}
+
+// 3. Função para esconder as sugestões
+function hideSuggestions() {
+  // Pequeno delay para permitir que o clique na sugestão seja registrado
+  setTimeout(() => {
+    suggestionsBox.classList.add('hidden');
+  }, 150);
+}
+
+// 4. Função para realizar a pesquisa (abre uma nova guia no Google)
+function performSearch(query) {
+    if (query.trim() !== '') {
+        const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+        window.open(googleSearchUrl, '_blank');
+    }
+}
+
+
+// 5. Adiciona os eventos ao campo de pesquisa
+searchInput.addEventListener('focus', showSuggestions); // Mostra ao clicar na barra
+searchInput.addEventListener('blur', hideSuggestions); // Esconde ao clicar fora
+
+// Adiciona pesquisa ao pressionar "Enter"
+searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        performSearch(searchInput.value);
+    }
+});
+</body>
